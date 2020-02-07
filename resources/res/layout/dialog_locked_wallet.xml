@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <ImageView android:id="@+id/dismissImage" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="16dp" android:layout_marginEnd="16dp" app:srcCompat="@drawable/ic_exit"/>
+    </LinearLayout>
+    <ImageView android:layout_width="44dp" android:layout_height="51dp" app:srcCompat="@drawable/ic_wallet_warning"/>
+    <TextView android:textSize="18sp" android:textStyle="bold" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/locked_wallet_dialog_title" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/locked_wallet_dialog_description" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+    <EditText android:textAppearance="@style/AppTextAppearance.Title" android:id="@+id/spendLockPasswordField" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:hint="@string/locked_wallet_password_hint" android:ems="10" android:inputType="textPassword" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/lockedWalletDialogActionLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+        <TextView android:textStyle="bold" android:textColor="@color/warningRed" android:id="@+id/removeWalletButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/general_dialog_remove_wallet" style="@style/AppTextAppearance.Title"/>
+        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <TextView android:textStyle="bold" android:textColor="@color/bchGreen" android:id="@+id/unlockWalletButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/locked_wallet_unlock_button" style="@style/AppTextAppearance.Title"/>
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView android:gravity="center_horizontal" android:id="@+id/loadingAnimation" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/animation_onboard_loading"/>
+</LinearLayout>

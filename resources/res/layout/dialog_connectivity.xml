@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_width="44dp" android:layout_height="51dp" android:layout_marginTop="24dp" app:srcCompat="@drawable/ic_network_disable"/>
+    <TextView android:textSize="18sp" android:textStyle="bold" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/missing_internet_dialog_title" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/missing_internet_dialog_description" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <TextView android:textStyle="bold" android:textColor="@color/bchGreen" android:id="@+id/retryButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_review_retry_button" style="@style/AppTextAppearance.Title"/>
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

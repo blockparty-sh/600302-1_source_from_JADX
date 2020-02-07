@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/background_header_with_underline" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/settings_network_fee_policy" style="@style/AppText.Bold.18.Black"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:text="@string/settings_network_fee_policy_description" style="@style/AppText.Regular.14.MediumGray"/>
+        <TextView android:id="@+id/learnMoreButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:layout_marginBottom="24dp" android:text="@string/settings_network_fee_learn_more" style="@style/AppTextAppearance.LabelGreen"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/priorityFeeCell" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:layout_marginBottom="12dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_network_fee_priority" style="@style/AppText.Semibold.15.Black"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_network_fee_priority_time" style="@style/AppText.Medium.14.MediumGray"/>
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:id="@+id/priorityFeeImageView" android:background="@drawable/ic_radio_unselected" android:layout_width="30dp" android:layout_height="30dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/normalFeeCell" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:layout_marginBottom="12dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_network_fee_normal" style="@style/AppText.Semibold.15.Black"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_network_fee_normal_time" style="@style/AppText.Medium.14.MediumGray"/>
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:id="@+id/normalFeeImageView" android:background="@drawable/ic_radio_unselected" android:layout_width="30dp" android:layout_height="30dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/economyFeeCell" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:layout_marginBottom="12dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_network_fee_economy" style="@style/AppText.Semibold.15.Black"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_network_fee_economy_time" style="@style/AppText.Medium.14.MediumGray"/>
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:id="@+id/economyFeeImageView" android:background="@drawable/ic_radio_unselected" android:layout_width="30dp" android:layout_height="30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

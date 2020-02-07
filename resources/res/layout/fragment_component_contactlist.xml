@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.SearchView android:id="@+id/keywordSearchView" android:background="@drawable/background_component_search_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:defaultQueryHint="@string/send_asset_contact_search" app:iconifiedByDefault="false" app:queryBackground="@null"/>
+    <RadioGroup android:orientation="horizontal" android:id="@+id/coinSelectionGroup" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="27dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTheme.ToggleButton">
+        <RadioButton android:gravity="center" android:id="@+id/bitcoinCashFilterButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/bch_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+        <RadioButton android:gravity="center" android:id="@+id/bitcoinFilterButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/btc_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+        <RadioButton android:gravity="center" android:id="@+id/slpFilterButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/slp_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+    </RadioGroup>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/contactList" android:background="@color/zxing_transparent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/contactEmptyView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="32dp" android:layout_marginTop="64dp" android:layout_marginRight="32dp">
+        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/ic_single_neutral_book"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/contact_empty_description" android:textAlignment="center" style="@style/EmptyStateText"/>
+        <TextView android:id="@+id/addContactButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/add_a_contact" android:textAlignment="center" style="@style/AppText.Bold.16.CashGreen"/>
+    </LinearLayout>
+</LinearLayout>

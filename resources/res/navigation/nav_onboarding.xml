@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_onboarding" app:startDestination="@+id/createUserView">
+    <fragment android:label="CreateWalletView" android:name="com.bitcoin.mwallet.app.flows.onboarding.createuser.CreateUserView" android:id="@+id/createUserView">
+        <action android:id="@+id/action_createUserView_to_migrationView" app:destination="@+id/migrationView"/>
+    </fragment>
+    <fragment android:label="MigrationView" android:name="com.bitcoin.mwallet.app.flows.onboarding.migrateprofile.MigrateProfileView" android:id="@+id/migrationView"/>
+</navigation>

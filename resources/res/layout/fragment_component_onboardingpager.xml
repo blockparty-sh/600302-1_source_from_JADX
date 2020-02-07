@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <androidx.viewpager.widget.ViewPager android:id="@+id/slideLayout" android:layout_width="wrap_content" android:layout_height="300dp" android:overScrollMode="never"/>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/dotIndicatorLayout" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

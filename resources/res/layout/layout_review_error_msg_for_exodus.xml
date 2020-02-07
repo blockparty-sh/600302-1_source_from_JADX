@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:theme="@style/wallet_40" android:textColor="@color/colorError" android:id="@+id/review_error_message" android:background="@color/white" android:layout_width="match_parent" android:layout_height="15dp" android:text="@string/passcode_incorrect" android:lines="1" android:layout_below="@+id/review_info_shadow_background" android:layout_marginStart="@dimen/margin_l" android:layout_marginEnd="@dimen/margin_l" android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

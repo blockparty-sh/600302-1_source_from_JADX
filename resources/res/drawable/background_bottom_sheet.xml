@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:top="0.5dp" android:right="0.5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/backgroundMainNew"/>
+            <corners android:topLeftRadius="@dimen/home_screen_button_radius" android:topRightRadius="@dimen/home_screen_button_radius"/>
+        </shape>
+    </item>
+</layer-list>

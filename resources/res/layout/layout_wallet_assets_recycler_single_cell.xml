@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/bitcoinWhite" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/mainLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/walletColorDot" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/background_wallet_color_dot" android:layout_marginStart="16dp"/>
+            <LinearLayout android:gravity="top|left|center_vertical|center_horizontal|center|start" android:orientation="vertical" android:id="@+id/captionLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="16dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:id="@+id/walletNameTextView" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="20" style="@style/AppText.Semibold.16.DarkGray"/>
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/backupRequiredIndicator" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/background_wallet_color_dot" android:layout_marginStart="6dp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/coinBalanceTextView" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AppText.Medium.12.MediumGray"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/fiatBalanceTextView" android:scrollbars="none" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="16dp" style="@style/AppText.Bold.15.DarkGray"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/balanceHiddenImageView" android:visibility="invisible" android:layout_width="20dp" android:layout_height="15dp" android:src="@drawable/ic_valuehidden" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/lockedImageView" android:visibility="invisible" android:layout_width="20dp" android:layout_height="15dp" android:src="@drawable/ic_locked_wallet" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

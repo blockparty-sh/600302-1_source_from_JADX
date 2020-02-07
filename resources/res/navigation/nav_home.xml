@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_home" app:startDestination="@+id/homeView">
+    <fragment android:label="HomeView" android:name="com.bitcoin.mwallet.app.flows.home.home.HomeView" android:id="@+id/homeView"/>
+    <action android:id="@+id/action_global_homeView" app:destination="@+id/homeView"/>
+</navigation>

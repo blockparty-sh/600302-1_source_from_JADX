@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/pitchBlack" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/cameraContainer" android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="@+id/spacer" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView android:id="@+id/zxing_barcode_scanner" android:layout_width="match_parent" android:layout_height="match_parent" app:zxing_scanner_layout="@layout/layout_qr_scanner_view"/>
+    </LinearLayout>
+    <Space android:id="@+id/spacer" android:layout_width="wrap_content" android:layout_height="16dp" app:layout_constraintBottom_toBottomOf="@+id/cameraContainer" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="@+id/inputContainer"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/inputContainer" android:background="@drawable/background_bottom_sheet" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/continueButtonContainer" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/spacer">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+            <EditText android:id="@+id/recipientEditText" android:background="@drawable/background_edit_text" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginLeft="16dp" android:layout_marginTop="24dp" android:layout_marginRight="16dp" android:hint="@string/send_enter_address_or_domain" android:maxLines="1" android:lines="1" android:inputType="textNoSuggestions" android:paddingStart="16dp" android:paddingEnd="32dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <ImageView android:id="@+id/rawInputValidImageView" android:layout_width="12dp" android:layout_height="12dp" android:layout_marginRight="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="@+id/recipientEditText" app:layout_constraintTop_toTopOf="@+id/recipientEditText" app:srcCompat="@drawable/ic_tick"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/buttonLayout" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginTop="24dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/pasteButton" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <LinearLayout android:background="@drawable/background_select_address_button" android:layout_width="60dp" android:layout_height="60dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="24dp" android:src="@drawable/ic_copy" android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/send_select_address_paste" android:textAlignment="center" style="@style/AppTextAppearance.Title"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/walletsButton" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <LinearLayout android:background="@drawable/background_select_address_button" android:layout_width="60dp" android:layout_height="60dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="24dp" android:src="@drawable/ic_copy_wallets" android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/send_select_address_my_wallets" android:textAlignment="center" style="@style/AppTextAppearance.Title"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/contactsButton" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <LinearLayout android:background="@drawable/background_select_address_button" android:layout_width="60dp" android:layout_height="60dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="24dp" android:src="@drawable/ic_copy_contacts" android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/send_select_address_contacts" android:textAlignment="center" style="@style/AppTextAppearance.Title"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/continueButtonContainer" android:background="@color/bitcoinWhite" android:layout_width="match_parent" android:layout_height="74dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/inputContainer">
+        <Button android:textColor="@drawable/gradient_button_text_color_selector" android:id="@+id/continueButton" android:background="@drawable/button_round_flat_ripple_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="16dp" android:text="@string/send_select_address_continue" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="0"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

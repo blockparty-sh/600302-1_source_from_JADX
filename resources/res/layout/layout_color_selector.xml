@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="8dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_color" style="@style/WalletCellTickerTitle"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <HorizontalScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/walletGreenColor" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/bchGreen"/>
+                <ImageView android:id="@+id/walletBlueColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorBlue"/>
+                <ImageView android:id="@+id/walletPurpleColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorPurple"/>
+                <ImageView android:id="@+id/walletNavyColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorNavy"/>
+                <ImageView android:id="@+id/walletOrangeColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorOrange"/>
+                <ImageView android:id="@+id/walletYellowColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorYellow"/>
+                <ImageView android:id="@+id/walletPinkColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorPink"/>
+                <ImageView android:id="@+id/walletTransparentColor" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="16dp" android:src="@drawable/background_wallet_color_dot" android:tint="@color/walletColorTransparent"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textAppearance="@style/AppTextAppearance.FlatButton" android:textSize="18sp" android:id="@+id/textView13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:text="ADD WALLET" android:layout_marginStart="24dp"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/createNewWalletButton" android:background="@drawable/button_round_ripple_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="26dp" android:layout_marginRight="16dp" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_createwallet"/>
+        <TextView android:textAppearance="@style/AppTextAppearance.FlatButton" android:textSize="14sp" android:textColor="@drawable/gradient_button_text_color_selector" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:text="@string/addwallet_create_new_wallet"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/importWalletButton" android:background="@drawable/button_round_ripple_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="20dp" android:layout_marginRight="16dp" android:layout_marginBottom="38dp" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_importwallet"/>
+        <TextView android:textAppearance="@style/AppTextAppearance.FlatButton" android:textSize="14sp" android:textColor="@drawable/gradient_button_text_color_selector" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:text="@string/addwallet_import_wallet"/>
+    </LinearLayout>
+</LinearLayout>

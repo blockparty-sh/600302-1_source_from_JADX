@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/errorLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/errorExpiredLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="56dp">
+            <ImageView android:layout_width="42dp" android:layout_height="42dp" app:srcCompat="@drawable/ic_expired_code"/>
+            <TextView android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="24dp" android:text="@string/send_bip70_expired" style="@style/AppTextAppearance.SubTitle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/errorInvalidLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="56dp">
+            <ImageView android:layout_width="42dp" android:layout_height="42dp" app:srcCompat="@drawable/ic_invalid_code"/>
+            <TextView android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="24dp" android:text="@string/send_bip70_invalid" style="@style/AppTextAppearance.SubTitle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/errorNoWallet" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="44dp" android:layout_height="51dp" android:layout_marginTop="24dp" app:srcCompat="@drawable/ic_crypto_wallet"/>
+            <TextView android:textSize="18sp" android:gravity="center" android:id="@+id/noWalletTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" style="@style/AppTextAppearance.Header"/>
+            <TextView android:id="@+id/noWalletDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+                <TextView android:textStyle="bold" android:textColor="@color/bchGreen" android:id="@+id/addWalletButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="26dp" style="@style/AppTextAppearance.Title"/>
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textColor="@drawable/gradient_button_text_color_selector" android:id="@+id/closeButton" android:background="@drawable/button_round_flat_ripple_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/send_bip70_close" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/loadingLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="56dp">
+        <com.airbnb.lottie.LottieAnimationView android:gravity="center_horizontal" android:id="@+id/loadingAnimation" android:layout_width="wrap_content" android:layout_height="wrap_content" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/animation_onboard_loading"/>
+        <TextView android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="24dp" android:text="@string/send_bip70_loading" style="@style/AppTextAppearance.SubTitle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/paymentLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="6dp">
+        <ProgressBar android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/expiryTimer" android:padding="3dp" android:layout_width="30dp" android:layout_height="30dp" android:progress="60" android:indeterminate="false" android:progressDrawable="@drawable/circular" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" style="?android:attr/progressBarStyleHorizontal"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/merchantInfo" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textAppearance="@style/AppTextAppearance.Title" android:gravity="center" android:id="@+id/merchantName" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:textAppearance="@style/AppTextAppearance.SubTitle" android:gravity="center" android:id="@+id/merchantDescription" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:textAppearance="@style/AppTextAppearance.Title" android:textSize="32sp" android:gravity="center" android:id="@+id/invoiceFiatAmount" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+        <TextView android:textAppearance="@style/AppTextAppearance.SubTitle" android:gravity="center" android:id="@+id/invoiceCoinAmount" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/send_bip70_payfrom_text"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/walletSelectContainer" android:layout_width="match_parent" android:layout_height="56dp">
+                <ImageView android:id="@+id/walletColorDot" android:layout_width="15dp" android:layout_height="15dp" android:layout_marginTop="4dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:srcCompat="@drawable/background_wallet_color_dot"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textAppearance="@style/AppTextAppearance.Header" android:textSize="16sp" android:id="@+id/sendingWalletNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/walletBip70Balance" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_downchevron"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textColor="@color/warningRed" android:layout_gravity="center" android:id="@+id/errorMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+        <com.ncorti.slidetoact.SlideToActView android:id="@+id/sendButton" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:inner_color="@color/bchGreen" app:outer_color="#0d2d323b" app:rotate_icon="false" app:slider_icon_color="@color/colorWhite" app:text="@string/general_slide_to_send" app:text_appearance="@style/AppTextAppearance.Sub" app:text_color="@color/xDarkGray"/>
+        <TextView android:textAppearance="@style/AppTextAppearance.SubTitle" android:gravity="center" android:id="@+id/cancelButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:text="@string/send_bip70_decline_payment"/>
+    </LinearLayout>
+</LinearLayout>

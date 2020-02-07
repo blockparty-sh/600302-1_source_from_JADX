@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <TextView android:textAppearance="@style/AppTextAppearance.FlatButton" android:textSize="14sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="8dp" android:text="@string/addwallet_asset_type" android:layout_weight="1" android:layout_marginStart="24dp"/>
+            <RadioGroup android:orientation="horizontal" android:id="@+id/coinSelectionGroup" android:padding="2dp" android:layout_width="213dp" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="8dp" android:layout_marginEnd="24dp" style="@style/AppTheme.ToggleButton">
+                <RadioButton android:gravity="center" android:id="@+id/bitcoinCashSelectionButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/bch_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+                <RadioButton android:gravity="center" android:id="@+id/bitcoinSelectionButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/btc_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/mnemonicLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp">
+            <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <com.google.android.material.chip.ChipGroup android:id="@+id/mainTagChipGroup" android:layout_width="match_parent" android:layout_height="wrap_content" app:chipSpacingVertical="4dp"/>
+                <EditText android:textAppearance="@style/AppTextAppearance.EditText" android:id="@+id/recoveryPhraseEditText" android:paddingLeft="16dp" android:paddingRight="32dp" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:hint="@string/addwallet_enter_recovery" android:maxLines="1" android:lines="1" android:inputType="none|text|textNoSuggestions|textUri|textPassword|textVisiblePassword" android:backgroundTint="@color/editTextUnderline"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="top" android:layout_gravity="top" android:orientation="vertical" android:layout_width="40dp" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <ImageButton android:gravity="center" android:id="@+id/qrCodeButton" android:background="@null" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_qr_code_scan" android:scaleType="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:enabled="false" android:textColor="@drawable/gradient_button_text_color_selector" android:id="@+id/importWalletByMnemonicButton" android:background="@drawable/button_round_ripple_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp" android:text="Import Wallet"/>
+            <com.airbnb.lottie.LottieAnimationView android:gravity="center_horizontal" android:id="@+id/loadingAnimation" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/animation_onboard_loading"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

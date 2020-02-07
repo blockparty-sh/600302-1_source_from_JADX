@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" app:cardBackgroundColor="@color/zxing_transparent" app:cardElevation="0dp">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/button_round_flat_ripple" android:padding="0dp" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:elevation="4dp">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/notificationIcon" android:layout_width="54dp" android:layout_height="54dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:src="@drawable/ic_qr_bch" android:layout_marginStart="8dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/receive_notification_title" android:layout_marginStart="12dp" style="@style/TextAppearance.AppCompat.Title"/>
+            <TextView android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/amountText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

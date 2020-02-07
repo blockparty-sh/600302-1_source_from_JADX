@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_wallet_recovery_phrase" app:startDestination="@+id/wallet_recovery_phrase">
+    <fragment android:label="ViewMnemonic" android:name="com.bitcoin.mwallet.app.flows.walletdetails.recoveryphrase.RecoveryPhraseView" android:id="@+id/wallet_recovery_phrase"/>
+</navigation>

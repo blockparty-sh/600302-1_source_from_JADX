@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="16sp" android:id="@+id/assetSelectTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/send_asset_token_title" android:textAllCaps="true" android:layout_marginStart="24dp" style="@style/AppTextAppearance.Title"/>
+    <androidx.appcompat.widget.SearchView android:id="@+id/keywordSearchView" android:background="@drawable/background_component_search_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:defaultQueryHint="@string/send_asset_token_search" app:iconifiedByDefault="false" app:queryBackground="@null"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/sendingAssetListView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="24dp" android:layout_weight="1" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/sendingAssetNoTokenLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="24dp" android:layout_weight="1">
+        <ImageView android:id="@+id/imageView2" android:layout_width="match_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_empty_assets"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="48dp" android:text="@string/send_asset_slp_empty" style="@style/AppTextAppearance.SubTitle"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/selectionTitle" android:gravity="center_vertical" android:id="@+id/walletSelectorTitleText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:text="@string/wallet_selector_select_wallet" android:textAllCaps="true" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/AppTextAppearance.Title"/>
+    <RadioGroup android:orientation="horizontal" android:id="@+id/coinSelectionGroup" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="27dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTheme.ToggleButton">
+        <RadioButton android:gravity="center" android:id="@+id/bitcoinCashFilterButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/bch_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+        <RadioButton android:gravity="center" android:id="@+id/bitcoinFilterButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/btc_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+        <RadioButton android:gravity="center" android:id="@+id/slpFilterButton" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/slp_symbol" android:layout_weight="1" style="@style/AppTheme.ToggleButton"/>
+    </RadioGroup>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/emptyWalletLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="44dp" android:layout_height="51dp" android:layout_marginTop="24dp" app:srcCompat="@drawable/ic_crypto_wallet"/>
+        <TextView android:textSize="18sp" android:gravity="center" android:id="@+id/noWalletTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" style="@style/AppTextAppearance.Header"/>
+        <TextView android:id="@+id/noWalletDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+            <TextView android:textStyle="bold" android:textColor="@color/bchGreen" android:id="@+id/addWalletButton" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AppTextAppearance.Title"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/walletSelectLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/walletListView" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </LinearLayout>
+</LinearLayout>

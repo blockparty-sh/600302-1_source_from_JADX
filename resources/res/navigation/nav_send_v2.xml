@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_send_v2" app:startDestination="@+id/selectAddress">
+    <fragment android:label="selectAddress" android:name="com.bitcoin.mwallet.app.flows.sendv2.selectaddress.SelectAddressView" android:id="@+id/selectAddress">
+        <action android:id="@+id/action_sendAddress_to_sendAmountSelection" app:destination="@+id/sendAmountSelection"/>
+        <action android:id="@+id/action_selectAddress_to_selectContactView" app:destination="@+id/selectContactView"/>
+        <action android:id="@+id/action_selectAddress_to_selectLocalReceivingWalletDialogView" app:destination="@+id/selectLocalReceivingWalletDialogView"/>
+        <action android:id="@+id/action_selectAddress_to_sendSuccess" app:destination="@+id/sendSuccess"/>
+    </fragment>
+    <fragment android:label="sendAmountSelection" android:name="com.bitcoin.mwallet.app.flows.sendv2.sendamountselection.SendAmountSelectionView" android:id="@+id/sendAmountSelection">
+        <action android:id="@+id/action_sendAmountSelection_to_sendReview" app:destination="@+id/sendReview" app:enterAnim="@anim/slide_in_from_bottom"/>
+        <action android:id="@+id/action_sendAmountSelection_to_selectCurrencyView" app:destination="@+id/selectCurrencyView"/>
+        <argument android:name="sendToUri" app:argType="com.bitcoin.mwallet.core.models.BitcoinUriContent"/>
+        <argument android:name="preferredWalletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="sendReview" android:name="com.bitcoin.mwallet.app.flows.sendv2.review.ReviewView" android:id="@+id/sendReview">
+        <action android:id="@+id/action_sendReview_to_sendSuccess" app:destination="@+id/sendSuccess"/>
+        <argument android:name="SendWhatModel" app:argType="com.bitcoin.mwallet.app.flows.sendv2.sendamountselection.SendWhatModel"/>
+    </fragment>
+    <fragment android:label="sendSuccess" android:name="com.bitcoin.mwallet.app.flows.sendv2.success.successView" android:id="@+id/sendSuccess">
+        <argument android:name="txid" app:argType="com.bitcoin.bitcoink.tx.TxId"/>
+        <argument android:name="sendWhatData" app:argType="com.bitcoin.mwallet.app.flows.sendv2.sendamountselection.SendWhatModel"/>
+    </fragment>
+    <dialog android:label="SelectContactView" android:name="com.bitcoin.mwallet.app.flows.sendv2.dialogs.selectcontact.SelectContactView" android:id="@+id/selectContactView"/>
+    <dialog android:label="SelectCurrencyView" android:name="com.bitcoin.mwallet.app.flows.sendv2.dialogs.selectcurrency.SelectCurrencyView" android:id="@+id/selectCurrencyView"/>
+    <dialog android:label="SelectLocalReceivingWalletDialogView" android:name="com.bitcoin.mwallet.app.components.walletselector.WalletSelectorDialogView" android:id="@+id/selectLocalReceivingWalletDialogView"/>
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/firstPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="locale">
+    <LinearLayout android:orientation="vertical" android:id="@+id/parentPanel" android:background="@drawable/dialog_background_material" android:paddingTop="9dp" android:paddingBottom="3dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layoutDirection="inherit" android:layout_marginEnd="10dp">
+        <LinearLayout android:orientation="vertical" android:id="@+id/topPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="inherit" android:paddingStart="25dp" android:paddingEnd="0dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/title_template" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="9dp" android:layoutDirection="inherit" android:layout_marginStart="0dp" android:layout_marginEnd="10dp">
+                <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/alertTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sign_tx_title" android:maxLines="2" android:fontFamily="sans-serif-light" android:textAlignment="viewStart" android:layoutDirection="inherit"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/contentPanel" android:layout_width="match_parent" android:layout_height="329dp" android:layout_weight="1" android:layoutDirection="inherit" android:paddingStart="25dp" android:paddingEnd="25dp">
+            <ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@+id/scrollView" android:background="#ffffcb" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="600dp" android:layoutDirection="inherit" android:scrollIndicators="8">
+                <TextView android:textSize="16dp" android:textColor="@color/black" android:id="@+id/message" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/sign_tx_description" android:layoutDirection="inherit" android:paddingStart="15dp" android:paddingEnd="15dp" style="?android:attr/textAppearanceMedium"/>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/buttonPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="inherit">
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" android:layoutDirection="inherit" android:paddingStart="0dp" android:paddingEnd="12dp" style="?android:attr/buttonBarStyle">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/leftSpacer" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.25" android:layoutDirection="inherit"/>
+                <Button android:id="@+id/button1" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1" android:layoutDirection="inherit" style="?android:attr/buttonBarButtonStyle"/>
+                <Button android:textColor="@color/alert_dialog_button" android:id="@+id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/btn_max_width" android:text="@string/reset_wallet_cancel" android:maxLines="2" android:layoutDirection="inherit" style="?android:attr/buttonBarButtonStyle"/>
+                <Button android:textColor="@color/alert_dialog_button" android:id="@+id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/btn_max_width" android:text="@string/reset_wallet_confirm" android:maxLines="2" android:layoutDirection="inherit" style="?android:attr/buttonBarButtonStyle"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/rightSpacer" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.25" android:layoutDirection="inherit"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

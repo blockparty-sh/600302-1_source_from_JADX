@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="24dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textAppearance="@style/AppTextAppearance.EditText" android:id="@+id/backupCodeEditText" android:paddingLeft="16dp" android:paddingRight="32dp" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginLeft="16dp" android:layout_marginTop="0dp" android:layout_marginRight="16dp" android:hint="@string/addwallet_paste_backup_plaintext" android:inputType="none|text|textNoSuggestions|textUri|textPassword|textVisiblePassword" android:backgroundTint="@color/editTextUnderline"/>
+            <EditText android:textAppearance="@style/AppTextAppearance.EditText" android:id="@+id/passwordEditText" android:paddingLeft="16dp" android:paddingRight="32dp" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginLeft="16dp" android:layout_marginTop="4dp" android:layout_marginRight="16dp" android:hint="@string/addwallet_enter_password" android:maxLines="1" android:lines="1" android:inputType="none|text|textNoSuggestions|textUri|textPassword|textVisiblePassword" android:backgroundTint="@color/editTextUnderline"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button android:enabled="false" android:textColor="@drawable/gradient_button_text_color_selector" android:id="@+id/importWalletByFileButton" android:background="@drawable/button_round_ripple_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp" android:text="@string/addwallet_import_wallet"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

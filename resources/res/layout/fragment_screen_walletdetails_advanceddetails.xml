@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/topBarContainer" android:background="@color/statusBar" android:layout_width="match_parent" android:layout_height="80dp">
+        <TextView android:textColor="@color/pitchBlack" android:id="@+id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_wallet_information" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/AppTextAppearance.LabelWhite"/>
+        <View android:id="@+id/view" android:background="@drawable/background_basic_divider" android:layout_width="match_parent" android:layout_height="1dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/scanForFundsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/scanForFundsLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_scan_for_funds" android:layout_weight="1" style="@style/SettingCellTitle"/>
+                    <ImageView android:layout_gravity="right" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_chevron_right" android:tint="@color/cashGreen"/>
+                </LinearLayout>
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@drawable/background_basic_divider"/>
+            </LinearLayout>
+            <include android:id="@+id/coinTypeCell" layout="@layout/layout_advanced_wallet_row"/>
+            <include android:id="@+id/walletIdCell" layout="@layout/layout_advanced_wallet_row"/>
+            <include android:id="@+id/configurationCell" layout="@layout/layout_advanced_wallet_row"/>
+            <include android:id="@+id/networkCell" layout="@layout/layout_advanced_wallet_row"/>
+            <include android:id="@+id/derivationCell" layout="@layout/layout_advanced_wallet_row"/>
+            <include android:id="@+id/pubKeyCell" layout="@layout/layout_advanced_wallet_row"/>
+            <include android:id="@+id/walletInputsCell" layout="@layout/layout_advanced_wallet_row"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

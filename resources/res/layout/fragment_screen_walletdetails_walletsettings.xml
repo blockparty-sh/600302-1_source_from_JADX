@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="80dp">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+                <ImageView android:id="@+id/walletHeaderColorDot" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/background_wallet_color_dot"/>
+                <TextView android:gravity="center" android:id="@+id/walletTitleTextView" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="8dp" style="@style/WalletNameTitle"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/walletNameLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_wallet_name" style="@style/WalletCellTickerTitle"/>
+                <EditText android:textAppearance="@style/AppTextAppearance.EditText" android:id="@+id/walletNameEditText" android:layout_width="match_parent" android:layout_height="64dp" android:maxLines="1" android:lines="1" android:maxLength="32" android:inputType="text" android:imeOptions="actionDone" android:paddingEnd="32dp" android:backgroundTint="@color/editTextUnderline"/>
+            </LinearLayout>
+            <include layout="@layout/layout_color_selector"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/settings_hide_balances" android:layout_weight="1" style="@style/WalletCellTickerTitle"/>
+                <Switch android:id="@+id/hideBalancesSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_request_spending_authentication" style="@style/WalletCellTickerTitle"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_need_biometrics" style="@style/SettingCellSubtitle"/>
+                </LinearLayout>
+                <Switch android:id="@+id/requireSpendingAuthSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/instantPayLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_auto_threshold_title" style="@style/WalletCellTickerTitle"/>
+                <com.cottacush.android.currencyedittext.CurrencyEditText android:textAppearance="@style/AppTextAppearance.EditText" android:id="@+id/autoSpendThreshold" android:padding="0dp" android:layout_width="match_parent" android:layout_height="64dp" android:maxLines="1" android:lines="1" android:maxLength="32" android:inputType="numberDecimal" android:paddingEnd="32dp" android:backgroundTint="@color/editTextUnderline" app:localeTag="en-us"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_auto_threshold_description" style="@style/SettingCellSubtitle"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/walletInformationContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/settings_wallet_information" android:layout_weight="1" style="@style/AppText.Regular.16.DarkGray"/>
+                    <ImageView android:layout_gravity="end" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_chevron_right" android:tint="@color/cashGreen"/>
+                </LinearLayout>
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@drawable/background_basic_divider"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/walletRecoveryPhraseContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/settings_show_my_recovery_phrase" android:layout_weight="1" style="@style/AppText.Regular.16.DarkGray"/>
+                    <ImageView android:layout_gravity="end" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_chevron_right" android:tint="@color/cashGreen"/>
+                </LinearLayout>
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@drawable/background_basic_divider"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/deleteWalletContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="48dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/warningRed" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/settings_delete_this_wallet" android:layout_weight="1" style="@style/AppText.Regular.16.DarkGray"/>
+                    <ImageView android:layout_gravity="end" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_chevron_right" android:tint="@color/warningRed"/>
+                </LinearLayout>
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@drawable/background_basic_divider"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

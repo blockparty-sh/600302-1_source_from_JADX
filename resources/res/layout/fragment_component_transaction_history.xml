@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/bchFilterLayout" android:paddingTop="24dp" android:paddingBottom="24dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/walletTableHeaderTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_weight="1" style="@style/AppText.Semibold.15.MediumGray"/>
+        <Switch android:layout_gravity="right" android:id="@+id/walletTableHeaderSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/txList" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/historyEmptyView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="32dp" android:layout_marginTop="64dp" android:layout_marginRight="32dp">
+        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/ic_empty_transactions"/>
+        <TextView android:id="@+id/EmptyAssetDescriptionTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/tx_history_empty_description" android:textAlignment="center" style="@style/EmptyStateText"/>
+        <TextView android:id="@+id/firstOptionTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tx_history_empty_option_first" android:textAlignment="center" style="@style/AppText.Medium.16.Green"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tx_history_empty_option_second" android:textAlignment="center" style="@style/EmptyStateText"/>
+    </LinearLayout>
+</LinearLayout>

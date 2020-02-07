@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@android:color/transparent" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/button_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@+id/review_button" android:background="@drawable/review_button_background" android:layout_width="@dimen/review_button_width" android:layout_height="@dimen/review_button_height" android:text="@string/cancel" android:textAlignment="center" style="@style/darklist_primary_xs_exodus"/>
+    </RelativeLayout>
+</RelativeLayout>

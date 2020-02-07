@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginBottom="8dp">
+        <ImageView android:layout_gravity="center" android:id="@+id/sendingAssetImageView" android:background="@drawable/background_wallet_color_dot" android:layout_width="40dp" android:layout_height="40dp"/>
+        <LinearLayout android:orientation="vertical" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginStart="8dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/pitchBlack" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/sendingAssetPrimaryName" android:padding="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="30" style="@style/AppTextAppearance.SubTitle"/>
+            <TextView android:textSize="16sp" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/sendingAssetSecondaryName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxLength="30" style="@style/AppTextAppearance.SubTitle"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="0.2dp" android:layout_marginBottom="4dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+</LinearLayout>

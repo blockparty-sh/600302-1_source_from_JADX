@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_receive" app:startDestination="@+id/receiveView">
+    <fragment android:label="ReceiveView" android:name="com.bitcoin.mwallet.app.flows.receive.receive.ReceiveView" android:id="@+id/receiveView" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        <argument android:name="walletPk" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId" app:nullable="true"/>
+        <action android:id="@+id/action_receiveView_to_receiveAmountSelection" app:destination="@+id/receiveAmountSelection"/>
+    </fragment>
+    <fragment android:label="receiveAmountSelection" android:name="com.bitcoin.mwallet.app.flows.receive.receiveamountselection.ReceiveAmountSelectionView" android:id="@+id/receiveAmountSelection">
+        <action android:id="@+id/action_sendAmountSelection_to_selectCurrencyView" app:destination="@+id/selectCurrencyView"/>
+        <argument android:name="coin" app:argType="com.bitcoin.mwallet.core.models.Coin"/>
+    </fragment>
+    <dialog android:label="SelectCurrencyView" android:name="com.bitcoin.mwallet.app.flows.sendv2.dialogs.selectcurrency.SelectCurrencyView" android:id="@+id/selectCurrencyView"/>
+</navigation>

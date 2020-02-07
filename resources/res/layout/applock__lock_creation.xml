@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" style="@style/applock__content_parent">
+    <TextView android:id="@+id/pin__description" style="@style/applock__description"/>
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/pin__fingerprint_image" app:srcCompat="@drawable/applock__fingerprint" app:tint="@color/applock__item_background" style="@style/applock__input_fingerprint_view"/>
+    <com.guardanis.applock.pin.PINInputView android:id="@+id/pin__input_view" style="@style/applock__input_pin_view"/>
+    <LinearLayout android:id="@+id/pin__create_chooser_items" style="@style/applock__action_chooser_parent">
+        <LinearLayout android:id="@+id/pin__create_option_pin" style="@style/applock__action_chooser_item_group">
+            <androidx.appcompat.widget.AppCompatImageView app:srcCompat="@drawable/applock__pin" app:tint="@color/applock__item_background" style="@style/applock__action_chooser_item_image"/>
+            <androidx.appcompat.widget.AppCompatTextView android:text="@string/applock__create_chooser_option_pin" style="@style/applock__action_chooser_item_text"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/pin__create_option_fingerprint" style="@style/applock__action_chooser_item_group">
+            <androidx.appcompat.widget.AppCompatImageView app:srcCompat="@drawable/applock__fingerprint" app:tint="@color/applock__item_background" style="@style/applock__action_chooser_item_image"/>
+            <androidx.appcompat.widget.AppCompatTextView android:text="@string/applock__create_chooser_option_fingerprint" style="@style/applock__action_chooser_item_text"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/pin__action_settings" style="@style/applock__action_settings"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <PreferenceCategory android:layout="@layout/layout_setting_header" app:key="settings_category" app:title="@string/settings_title">
+        <Preference android:icon="@drawable/ic_book_address" android:layout="@layout/layout_setting_cell" app:key="contacts_key" app:title="@string/settings_address_book"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/layout_setting_category" app:key="preference_category" app:title="@string/settings_preference_group">
+        <Preference android:icon="@drawable/ic_currency_euro_dollar_exchange" android:layout="@layout/layout_setting_cell" android:title="@string/settings_currencies" android:key="preference_fiat_currency"/>
+        <Preference android:icon="@drawable/ic_gauge_dashboard" android:layout="@layout/layout_setting_cell" android:title="@string/settings_network_fee_policy" android:key="preference_network_fee"/>
+        <SwitchPreference android:icon="@drawable/ic_alarm_bell" android:layout="@layout/layout_setting_switch_cell" android:title="@string/settings_enable_notifications_title" android:key="preference_notifications" android:summary="" android:summaryOn="" android:summaryOff=""/>
+        <SwitchPreference android:icon="@drawable/ic_pin_lock" android:layout="@layout/layout_setting_switch_cell" android:title="@string/settings_applock_title" android:key="preference_app_locks"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/layout_setting_category" app:key="help_category" app:title="@string/settings_help_support">
+        <Preference android:icon="@drawable/ic_question_circle" android:layout="@layout/layout_setting_cell" app:title="@string/settings_help_support">
+            <intent android:action="android.intent.action.VIEW" android:data="https://support.bitcoin.com/en/collections/2050805-wallet"/>
+        </Preference>
+        <Preference android:icon="@drawable/ic_messages_bubble_quotation" android:layout="@layout/layout_setting_cell" app:key="help_feedback" app:title="@string/help_feedback">
+            <intent android:action="android.intent.action.VIEW" android:data="https://support.bitcoin.com/en/collections/2050805-wallet"/>
+        </Preference>
+        <Preference android:icon="@drawable/ic_app_share" android:layout="@layout/layout_setting_cell" app:key="share_app" app:title="@string/settings_share"/>
+        <Preference android:icon="@drawable/ic_information_circle" android:layout="@layout/layout_setting_cell" app:key="help_app_info" app:title="@string/settings_about"/>
+        <Preference android:icon="@drawable/ic_export_legacy" android:layout="@layout/layout_setting_cell" app:key="preference_wallet_export" app:title="@string/settings_export_legacy_wallet_file"/>
+    </PreferenceCategory>
+</PreferenceScreen>

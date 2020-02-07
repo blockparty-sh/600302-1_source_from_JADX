@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/xxLightGray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/walletHeader" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="8dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/walletHeaderColorDot" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/background_wallet_color_dot"/>
+            <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/walletNameHeader" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="12dp" android:maxLength="25" style="@style/WalletNameTitle"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/walletSettingsButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_moreoptions" android:scaleType="center" android:minWidth="40dp" android:minHeight="40dp" android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:id="@+id/walletValueTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textAlignment="center" style="@style/WalletValueTitle"/>
+    <TextView android:id="@+id/walletSummaryTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/AppText.Semibold.14.MediumGray"/>
+    <TextView android:id="@+id/priceChangeTextView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/PriceChangeText"/>
+    <com.lijiankun24.shadowlayout.ShadowLayout android:id="@+id/backupNotice" android:layout_width="wrap_content" android:layout_height="wrap_content" app:shadowColor="@color/shadowColor" app:shadowDx="0dp" app:shadowDy="3dp" app:shadowRadius="8dp" app:shadowShape="1" app:shadowSide="1111">
+        <androidx.cardview.widget.CardView android:background="@drawable/background_card_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:elevation="1dp" app:cardBackgroundColor="@color/bitcoinWhite" app:cardCornerRadius="12dp" app:cardElevation="1dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="23dp" android:layout_marginBottom="18dp" android:layout_marginStart="25dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:id="@+id/imageView3" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_backup_warning"/>
+                    <TextView android:textAppearance="@style/AppTextAppearance.Title" android:textSize="14sp" android:textColor="@color/warningRed" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/backup_warning_title" android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:text="@string/backup_warning_description" android:layout_weight="1" android:layout_marginEnd="50dp"/>
+                <TextView android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textSize="16sp" android:textColor="@color/bchGreen" android:id="@+id/backupButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backup_button" android:layout_weight="1" android:textAllCaps="true"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </com.lijiankun24.shadowlayout.ShadowLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/fragment_component_receivesendbuttons"/>
+    </LinearLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@+id/tabLayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabBackground="@drawable/tab_indicator_selector" app:tabIndicatorColor="@color/backgroundMainNew" app:tabIndicatorHeight="0dp" app:tabMaxWidth="412dp" app:tabSelectedTextColor="@color/bchGreen" app:tabTextAppearance="@style/AppTextAppearance.TabItem" app:tabTextColor="@color/icon_deemphasised">
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem android:id="@+id/assetsTabItem" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/historyAssetsViewPager" android:background="@color/bitcoinWhite" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

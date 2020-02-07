@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/bchGreen" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/checkmarkContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:layout_width="150dp" android:layout_height="150dp" app:lottie_autoPlay="true" app:lottie_rawRes="@raw/animation_tick" app:lottie_repeatCount="0"/>
+        <TextView android:textColor="@color/colorWhite" android:id="@+id/transactionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/send_success_transaction_sent" android:textAlignment="center" style="@style/AppTextAppearance.ValueM"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/amountContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/checkmarkContainer">
+        <TextView android:textSize="48sp" android:textColor="@color/colorWhite" android:id="@+id/primarySendAmountTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/AppTextAppearance.ValueLarge"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/secondaryPriceLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageView android:id="@+id/coinLogo" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginEnd="4dp" app:srcCompat="@drawable/ic_qr_bch"/>
+            <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:ellipsize="end" android:id="@+id/secondarySendAmountTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxEms="12" android:textAlignment="center" style="@style/AppTextAppearance.ValueM"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <EditText android:textColor="@color/colorWhite" android:textColorHighlight="@color/colorAccent" android:textColorHint="@color/colorWhite" android:id="@+id/memoEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="32dp" android:layout_marginTop="26dp" android:layout_marginRight="32dp" android:layout_marginBottom="8dp" android:hint="@string/send_success_add_personal_note" android:maxLines="2" android:maxLength="108" android:inputType="textNoSuggestions" android:textCursorDrawable="@drawable/text_cursor_custom" android:backgroundTint="@color/colorWhite" app:layout_constraintBottom_toTopOf="@+id/linearLayout3" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/amountContainer" app:layout_constraintVertical_bias="0" style="@style/AppText.Regular.18"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayout3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="32dp" android:layout_marginRight="32dp" android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/finishButton" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/memoEditText">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/viewDetailsButton" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:background="@drawable/background_success_button" android:layout_width="60dp" android:layout_height="60dp">
+                <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="24dp" android:src="@drawable/ic_viewdetails" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:textColor="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/send_success_view_details" android:textAlignment="center" style="@style/AppTextAppearance.Title"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/shareButton" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:background="@drawable/background_success_button" android:layout_width="60dp" android:layout_height="60dp">
+                <ImageView android:layout_gravity="center" android:layout_width="0dp" android:layout_height="24dp" android:src="@drawable/ic_share" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:textColor="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/send_success_share" android:textAlignment="center" style="@style/AppTextAppearance.Title"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textColor="@color/bchGreen" android:id="@+id/finishButton" android:background="@drawable/button_round_flat_inverted_ripple" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp" android:text="@string/general_acknowledge" android:textAllCaps="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

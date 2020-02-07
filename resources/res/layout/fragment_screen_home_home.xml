@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:tag="homeFragment" android:background="@color/xxLightGray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:id="@+id/scrollView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/homeLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <fragment android:name="com.bitcoin.mwallet.app.components.globalbalance.view.GlobalBalanceView" android:tag="globalBalanceView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp"/>
+            <fragment android:name="com.bitcoin.mwallet.app.components.receivesendbuttons.view.ReceiveSendButtonsView" android:tag="homeSendReceiveButtons" android:layout_width="match_parent" android:layout_height="75dp" android:layout_marginTop="8dp" android:layout_marginBottom="0dp"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/addWalletContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="8dp" android:layout_marginRight="24dp" android:layout_weight="1">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_wallets" style="@style/AppText.Bold.16.Black"/>
+                <View android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" app:srcCompat="@drawable/ic_addwallet"/>
+                    <TextView android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginRight="8dp" android:text="@string/home_add_plus" android:textAlignment="center" style="@style/AppText.Bold.16.Black"/>
+                </LinearLayout>
+            </LinearLayout>
+            <fragment android:name="com.bitcoin.mwallet.app.components.walletassetsrecycler.WalletAssetsRecyclerView" android:tag="homeCoinsView" android:background="@color/xxLightGray" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <fragment android:name="com.bitcoin.mwallet.app.components.buybitcoinbuttons.view.BuyBitcoinButtonsView" android:tag="homeBuyBitcoinButtonView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

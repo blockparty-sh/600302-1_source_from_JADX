@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/dialog_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="33dp" android:layout_marginBottom="24dp" app:srcCompat="@drawable/ic_altcurrency"/>
+    <TextView android:textAppearance="@style/AppTextAppearance.Header" android:textSize="18sp" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/settings_currencies_confirmation_title"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/settings_currencies_confirmation_description" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="33dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/gray" android:id="@+id/cancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/general_cancel_button" style="@style/AppTextAppearance.SubTitle"/>
+        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <TextView android:textStyle="bold" android:textColor="@color/bchGreen" android:gravity="end" android:id="@+id/currencyUpdateConfirmButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_currencies_confirmation_confirm_button" style="@style/AppTextAppearance.Title"/>
+    </LinearLayout>
+</LinearLayout>

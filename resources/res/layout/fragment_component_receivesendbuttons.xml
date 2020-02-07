@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="75dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+    <com.lijiankun24.shadowlayout.ShadowLayout android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:shadowColor="@color/shadowColor" app:shadowDx="0dp" app:shadowDy="3dp" app:shadowRadius="8dp" app:shadowShape="1" app:shadowSide="1111">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/sendButton" android:background="@drawable/button_round_left_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_send_green"/>
+                <TextView android:textAppearance="@style/AppText.Bold.16.Black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:text="@string/home_send"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/receiveButton" android:background="@drawable/button_round_right_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_receive_green"/>
+                <TextView android:textAppearance="@style/AppText.Bold.16.Black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:text="@string/home_receive"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.lijiankun24.shadowlayout.ShadowLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

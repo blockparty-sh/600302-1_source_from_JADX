@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/pitchBlack" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/pitchBlack" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/inputContainer" app:layout_constraintTop_toTopOf="0">
+        <fragment android:name="com.bitcoin.mwallet.app.components.customheader.CustomHeaderView" android:id="@+id/amountSelectionCustomHeaderView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <View android:layout_width="match_parent" android:layout_height="0dp"/>
+            <androidx.appcompat.widget.AppCompatTextView android:gravity="center" android:id="@+id/primaryAmountTextView" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" app:autoSizeMaxTextSize="56sp" app:autoSizeMinTextSize="26sp" app:autoSizeTextType="1" style="@style/AppTextAppearance.ValueWhite"/>
+            <TextView android:gravity="top" android:id="@+id/secondaryAmountTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/AppTextAppearance.SecondaryCurrency"/>
+            <TextView android:textColor="@color/bodyRed" android:id="@+id/errorMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/AppTextAppearance.BodyDeemphasised"/>
+            <View android:layout_width="match_parent" android:layout_height="0dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp">
+            <TextView android:textSize="18sp" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/currencySelector" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="16dp" style="@style/AppTextAppearance.LabelGreen"/>
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/sendAllButton" android:layout_width="wrap_content" android:layout_height="50dp" android:text="@string/send_amount_send_all" android:textAllCaps="true" style="@style/AppTextAppearance.LabelGreen"/>
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <ImageButton android:layout_gravity="end" android:id="@+id/swapFiatButton" android:background="@color/pitchBlack" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_swap_vertical" android:scaleY="0.8" android:layout_marginEnd="16dp" style="@style/Widget.DeviceDefault.ImageButton"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/inputContainer" android:background="@drawable/background_rounded_gray_bottom_sheet" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0">
+        <LinearLayout android:orientation="vertical" android:id="@+id/walletSelectContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/send_from" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppText.Semibold.16.MediumGray"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical|clip_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/walletColorDot" android:padding="0dp" android:layout_width="12dp" android:layout_height="12dp" app:srcCompat="@drawable/background_wallet_color_dot"/>
+                    <TextView android:textAppearance="@style/AppTextAppearance.TitleSm" android:ellipsize="end" android:id="@+id/sendingWalletNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="22" android:textAlignment="textEnd" android:layout_marginStart="4dp" style="@style/AppText.Bold.16.Black"/>
+                </LinearLayout>
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                <LinearLayout android:gravity="right|center_vertical|center_horizontal|center|end" android:orientation="vertical" android:padding="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+                    <TextView android:id="@+id/sendingWalletPrimaryBalance" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1" style="@style/AppText.Bold.16.Black"/>
+                    <TextView android:id="@+id/sendingWalletSecondaryBalance" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1" style="@style/AppText.Bold.16.Black"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageView4" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="8dp" app:srcCompat="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:background="@drawable/background_rounded_bordered_bottom_sheet" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <fragment android:name="com.bitcoin.mwallet.app.components.pinpad.pinpadView" android:id="@+id/fragment" android:tag="pinpadFragment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

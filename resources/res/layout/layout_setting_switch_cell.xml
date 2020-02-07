@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/background_with_underline" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="54dp">
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <ImageView android:id="@android:id/icon" android:layout_width="19dp" android:layout_height="19dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:layout_gravity="center_vertical" android:id="@android:id/title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/AppText.Regular.16.Black"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="48dp" android:layout_height="match_parent">
+            <Switch android:id="@android:id/overflow_menu_presenter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textAppearance="@style/AppText.Medium.14.MediumGray" android:layout_gravity="center_vertical" android:id="@android:id/summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:layout_marginRight="56dp" android:layout_marginBottom="8dp" android:fontFamily="@font/sf_pro_display_regular"/>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="6dp" android:elevation="2dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/transactionHeader">
+        <androidx.cardview.widget.CardView android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="12dp">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/background_card_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="2dp">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_weight="1" android:layout_marginEnd="16dp">
+                    <ImageView android:id="@+id/txCoinIcon" android:layout_width="45dp" android:layout_height="match_parent" android:layout_marginStart="24dp" android:layout_marginEnd="8dp" app:srcCompat="@drawable/logo_bch_green"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatTextView android:id="@+id/txCoinAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" app:autoSizeMaxTextSize="56sp" app:autoSizeMinTextSize="26sp" app:autoSizeTextType="1" style="@style/WalletValueTitle"/>
+                        <TextView android:id="@+id/txFiatAmount" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdvancedWalletTitle"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginLeft="24dp" android:layout_marginRight="24dp" android:src="@drawable/background_divider_dotted" android:layerType="software"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="16dp" android:layout_marginRight="24dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tx_details_status" style="@style/txDetailTitle"/>
+                    <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <ImageView android:layout_gravity="center_vertical" android:id="@+id/confirmedStatusImageView" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_tick"/>
+                        <TextView android:layout_gravity="end" android:id="@+id/confirmedStatusTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" style="@style/AppText.Regular.14"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="16dp" android:layout_marginRight="24dp" android:layout_marginBottom="12dp" style="@style/txDetailTitle">
+                    <TextView android:id="@+id/counterPartyTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:text="@string/tx_details_from" style="@style/txDetailTitle"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/sentAddressTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_enter_address_or_domain" android:layout_weight="1" style="@style/SettingCellSubtitle"/>
+                        <ImageView android:layout_gravity="center_vertical" android:id="@+id/walletColorDot" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/background_wallet_color_dot"/>
+                        <TextView android:id="@+id/txWalletNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" style="@style/WalletCellTickerTitle"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@drawable/background_basic_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="16dp" android:layout_marginRight="24dp" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tx_details_date" style="@style/txDetailTitle"/>
+                    <TextView android:id="@+id/dateTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SettingCellSubtitle"/>
+                </LinearLayout>
+                <View android:background="@drawable/background_basic_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="1dp" android:layout_marginStart="20dp" android:layout_marginEnd="24dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tx_details_personal_memo" android:layout_marginStart="4dp" style="@style/txDetailTitle"/>
+                    <EditText android:gravity="top" android:layout_gravity="top" android:id="@+id/memoEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-8dp" android:hint="@string/tx_details_memo_hint" android:maxLines="2" android:maxLength="108" android:layout_weight="1" android:backgroundTint="@color/zxing_transparent" style="@style/SettingCellSubtitle"/>
+                </LinearLayout>
+                <View android:background="@drawable/background_basic_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/feeCell" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="16dp" android:layout_marginRight="24dp" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tx_details_fee" style="@style/txDetailTitle"/>
+                    <TextView android:id="@+id/feeTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SettingCellSubtitle"/>
+                </LinearLayout>
+                <View android:id="@+id/feeDivider" android:background="@drawable/background_basic_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"/>
+                <TextView android:id="@+id/viewTransactionExplorer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginTop="24dp" android:layout_marginRight="24dp" android:layout_marginBottom="24dp" android:text="@string/tx_details_view_tx" style="@style/AppTextAppearance.LabelGreen"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+    <LinearLayout android:id="@+id/transactionHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:id="@+id/txTypeImageView" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_tx_sent_blue" android:scaleType="fitXY" android:layout_weight="1"/>
+        <TextView android:id="@+id/txTypeTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" style="@style/WalletNameTitle"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

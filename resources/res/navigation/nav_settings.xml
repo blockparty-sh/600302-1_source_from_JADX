@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_settings" app:startDestination="@+id/settingsView">
+    <fragment android:label="SettingsView" android:name="com.bitcoin.mwallet.app.flows.settings.settings.SettingsView" android:id="@+id/settingsView">
+        <action android:id="@+id/action_settingsView_to_contactsView" app:destination="@+id/contactsView"/>
+        <action android:id="@+id/action_settingsView_to_networkFeeView" app:destination="@+id/networkFeeView"/>
+        <action android:id="@+id/action_settingsView_to_currenciesView" app:destination="@+id/currenciesView"/>
+        <action android:id="@+id/action_settingsView_to_languageView" app:destination="@+id/languageView"/>
+    </fragment>
+    <fragment android:label="ContactsView" android:name="com.bitcoin.mwallet.app.components.contacts.view.ContactsView" android:id="@+id/contactsView"/>
+    <fragment android:label="NetworkFeeView" android:name="com.bitcoin.mwallet.app.flows.settings.networkfee.NetworkFeeView" android:id="@+id/networkFeeView"/>
+    <fragment android:label="CurrenciesView" android:name="com.bitcoin.mwallet.app.flows.settings.currencies.CurrenciesView" android:id="@+id/currenciesView"/>
+    <fragment android:label="CurrenciesView" android:name="com.bitcoin.mwallet.app.flows.settings.language.LanguageView" android:id="@+id/languageView"/>
+</navigation>

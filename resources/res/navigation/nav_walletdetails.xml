@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_walletdetails" app:startDestination="@+id/walletOverview">
+    <fragment android:label="walletOverView" android:name="com.bitcoin.mwallet.app.flows.walletdetails.overview.OverviewView" android:id="@+id/walletOverview">
+        <action android:id="@+id/action_walletOverview_to_walletSettings" app:destination="@+id/walletSettings" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/action_walletOverview_to_txDetails" app:destination="@+id/txDetails" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/action_walletOverview_to_walletRecoveryPhrase" app:destination="@+id/walletRecoveryPhrase"/>
+    </fragment>
+    <fragment android:label="txDetails" android:name="com.bitcoin.mwallet.app.flows.walletdetails.txdetails.TxDetailsView" android:id="@+id/txDetails">
+        <argument android:name="txid" app:argType="string"/>
+        <argument android:name="walletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId"/>
+    </fragment>
+    <fragment android:label="walletSettings" android:name="com.bitcoin.mwallet.app.flows.walletdetails.walletsettings.WalletSettingsView" android:id="@+id/walletSettings">
+        <argument android:name="walletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId"/>
+        <action android:id="@+id/action_walletSettings_to_walletAdvancedDetails" app:destination="@+id/walletAdvancedDetails" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/action_walletSettings_to_walletDeleteWallet" app:destination="@+id/walletDeleteWallet" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/action_walletSettings_to_walletRecoveryPhrase" app:destination="@+id/walletRecoveryPhrase" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment android:label="advancedDetails" android:name="com.bitcoin.mwallet.app.flows.walletdetails.advanceddetails.AdvancedDetailsView" android:id="@+id/walletAdvancedDetails">
+        <argument android:name="walletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId"/>
+        <action android:id="@+id/action_walletAdvancedDetails_to_walltScanForTransactions" app:destination="@+id/walltScanForTransactions"/>
+    </fragment>
+    <fragment android:label="deleteWallet" android:name="com.bitcoin.mwallet.app.flows.walletdetails.deletewallet.DeleteWalletView" android:id="@+id/walletDeleteWallet">
+        <argument android:name="walletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId"/>
+    </fragment>
+    <fragment android:label="recoverWallet" android:name="com.bitcoin.mwallet.app.flows.walletdetails.recoveryphrase.RecoveryPhraseView" android:id="@+id/walletRecoveryPhrase">
+        <argument android:name="walletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId"/>
+        <argument android:name="walletTicker" app:argType="string"/>
+    </fragment>
+    <fragment android:label="scanForTransactions" android:name="com.bitcoin.mwallet.app.flows.walletdetails.scanfortransactions.ScanForTransactionsView" android:id="@+id/walltScanForTransactions">
+        <argument android:name="walletId" app:argType="com.bitcoin.mwallet.core.models.wallet.WalletId"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/topBarContainer" android:background="@color/statusBar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="80dp">
+        <TextView android:textColor="@color/pitchBlack" android:id="@+id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_scan_for_transactions" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/AppTextAppearance.LabelWhite"/>
+        <View android:id="@+id/view" android:background="@drawable/background_basic_divider" android:layout_width="match_parent" android:layout_height="1dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/actionLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:text="@string/settings_scan_for_transactions_details" android:textAlignment="viewStart" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppText.Regular.14.MediumGray"/>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center|start" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:orientation="horizontal" android:id="@+id/scanForFundsLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+            <ImageView android:id="@+id/progressIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_scan_address"/>
+            <TextView android:id="@+id/buttonTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_scan_for_funds" android:layout_marginStart="8dp" style="@style/AppText.Semibold.14.Green"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

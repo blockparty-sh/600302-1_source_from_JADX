@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/pitchBlack" android:layout_width="match_parent" android:layout_height="match_parent">
+    <fragment android:name="com.bitcoin.mwallet.app.components.customheader.CustomHeaderView" android:id="@+id/reviewCustomHeaderView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:textSize="35sp" android:gravity="center" android:id="@+id/primaryAmountTextView" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/AppTextAppearance.ValueWhite"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <View android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageView android:id="@+id/coinLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0.7" android:scaleY="0.7" app:srcCompat="@drawable/logo_btc"/>
+            <TextView android:gravity="center" android:id="@+id/secondaryAmountTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AppTextAppearance.SecondaryCurrency"/>
+            <View android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/reviewContainer" android:background="@drawable/background_rounded_bottom_sheet" android:layout_width="match_parent" android:layout_height="450dp" app:layout_constraintBottom_toBottomOf="0">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/walletSelectContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+            <ImageView android:layout_gravity="center" android:id="@+id/walletColorDot" android:layout_width="12dp" android:layout_height="12dp" app:srcCompat="@drawable/background_wallet_color_dot"/>
+            <TextView android:textSize="18sp" android:layout_gravity="center_vertical" android:id="@+id/reviewWalletName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" style="@style/AppTextAppearance.TitleSm"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textStyle="bold" android:layout_gravity="center" android:id="@+id/reviewFiatBalance" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/AppTextAppearance.Sub"/>
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="50dp" app:srcCompat="@drawable/ic_downchevron"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="@color/pitchBlack" android:id="@+id/coinTypeAddressLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/AppTextAppearance.Sub"/>
+            <TextView android:ellipsize="middle" android:id="@+id/destinationAddresssTextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:textAlignment="center" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/AppTextAppearance.Sub"/>
+        </LinearLayout>
+        <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="0.2dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+        <LinearLayout android:id="@+id/feeLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_review_fee" style="@style/AppTextAppearance.Sub"/>
+            <TextView android:id="@+id/networkFeeText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="viewEnd" style="@style/AppTextAppearance.Sub"/>
+        </LinearLayout>
+        <TextView android:textSize="14sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/send_review_transaction_note" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Sub"/>
+        <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="0.2dp" android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/reviewErrorLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/send_review_error_description" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0"/>
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/bchGreen" android:layout_gravity="center_horizontal" android:id="@+id/reviewErrorRetry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_review_retry_button" style="@style/AppTextAppearance.LabelGreen"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/sendButtonLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.ncorti.slidetoact.SlideToActView android:id="@+id/sendButton" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" app:inner_color="@color/bchGreen" app:outer_color="#0d2d323b" app:rotate_icon="false" app:slider_icon_color="@color/colorWhite" app:text="@string/general_slide_to_send" app:text_appearance="@style/AppTextAppearance.Sub" app:text_color="@color/xDarkGray"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

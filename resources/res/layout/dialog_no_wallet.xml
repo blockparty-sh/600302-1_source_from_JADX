@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_width="44dp" android:layout_height="51dp" android:layout_marginTop="24dp" app:srcCompat="@drawable/ic_crypto_wallet"/>
+    <TextView android:id="@+id/noWalletDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/AppTextAppearance.Title"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+        <TextView android:textStyle="bold" android:textColor="@color/bchGreen" android:id="@+id/addWalletButton" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AppTextAppearance.Title"/>
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
